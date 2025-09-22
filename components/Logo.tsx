@@ -220,10 +220,18 @@ const LogoSvg = ({
   );
 };
 
-function Logo() {
+function Logo({
+  width,
+  height,
+  color = "black",
+}: {
+  width: number;
+  height?: number;
+  color?: string;
+}) {
   return (
     <Link href="/">
-      <LogoSvg2 color="#000000" width={320} />
+      <LogoSvg color={color} width={width} height={height} />
     </Link>
   );
 }

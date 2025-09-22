@@ -1,11 +1,15 @@
-"use client";
-
 import Logo from "@/components/Logo";
 import "@/styles/globals.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import type { Metadata } from "next";
+import ResponsiveTopMenu from "@/components/ResponsiveTopMenu";
 
-const navLinks = [
+export const metadata: Metadata = {
+  title: "Leslie Cavalier",
+  description: "A lifestyle brand and clothing company established in 2025.",
+};
+
+export const navLinks = [
   {
     label: "Shop",
     href: "/shop",
@@ -33,31 +37,22 @@ export default function PageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-
   return (
     <html>
+      <head>
+        <title>Leslie Cavalier</title>
+        <meta
+          name="description"
+          content="A lifestyle brand and clothing company established in 2025."
+        />
+        <meta name="viewport" content="width=500, initial-scale=1" />
+      </head>
       <body>
-        <nav className="flex font-iowan px-4 py-4 items-center max-w-screen-2xl mx-auto">
-          <div className="inline-block py-4">
-            <Logo />
+        <nav className="flex font-iowan px-4 py-4 items-center max-w-screen-2xl mx-auto justify-between">
+          <div className="py-4 pl-1">
+            <Logo width={260} />
           </div>
-          <div className="mt-16 ml-32 mx-8 flex-1">
-            <ul className="flex gap-16 justify-end">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    className={`text-xl ${
-                      pathname === link.href ? "pb-1 border-b-2" : ""
-                    }`}
-                    href={link.href}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ResponsiveTopMenu />
         </nav>
         <main className="max-w-7xl mx-auto min-h-screen">{children}</main>
       </body>
