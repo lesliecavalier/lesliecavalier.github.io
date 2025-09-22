@@ -1,13 +1,6 @@
 import Logo from "@/components/Logo";
 import "@/styles/globals.css";
-import Link from "next/link";
-import type { Metadata } from "next";
 import ResponsiveTopMenu from "@/components/ResponsiveTopMenu";
-
-export const metadata: Metadata = {
-  title: "Leslie Cavalier",
-  description: "A lifestyle brand and clothing company established in 2025.",
-};
 
 export const navLinks = [
   {
