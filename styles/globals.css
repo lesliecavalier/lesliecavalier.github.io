@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "Iowan Old Style";
+  src: url("https://db.onlinewebfonts.com/t/105522e6f4e63f17e4ea721f353925de.eot");
+  src: url("https://db.onlinewebfonts.com/t/105522e6f4e63f17e4ea721f353925de.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/105522e6f4e63f17e4ea721f353925de.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/105522e6f4e63f17e4ea721f353925de.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/105522e6f4e63f17e4ea721f353925de.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/105522e6f4e63f17e4ea721f353925de.svg#Iowan Old Style")
+      format("svg");
+}
+
+@theme inline {
+  --font-iowan: "Iowan Old Style";
+}
