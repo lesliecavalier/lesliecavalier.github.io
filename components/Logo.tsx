@@ -231,7 +231,7 @@ function Logo({
 }) {
   return (
     <Link href="/">
-      <LogoSvg color={color} width={width} height={height} />
+      <LogoSvg2 color={color} width={width} height={height} />
     </Link>
   );
 }

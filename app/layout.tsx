@@ -16,8 +16,8 @@ export const navLinks = [
     href: "/about",
   },
   {
-    label: "Blog",
-    href: "/blog",
+    label: "Favorites",
+    href: "/favorites",
   },
   {
     label: "Contact",
@@ -34,6 +34,7 @@ export default function PageLayout({
     <html>
       <head>
         <title>Leslie Cavalier</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
         <meta
           name="description"
           content="A lifestyle brand and clothing company established in 2025."
